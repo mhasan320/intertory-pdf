@@ -1,0 +1,178 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* print content css */
+.print-button{
+  border:1px solid #22C55E;
+  color:#22C55E;
+  padding: .5rem 1.25rem;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.print-button:hover{
+  background-color: #e7fcee;
+  color: #22C55E;
+  transition: all .3s ease-in-out;
+}
+.print-top{
+  display: flex;
+  justify-content: end;
+}
+.print-content{
+  padding: 2rem 2rem 0rem;
+  width: 100%;
+  text-align: center;
+}
+.print-topItem{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.print-topItem h3{
+  font-size: 1.125rem;
+  margin: 12px 0px;
+}
+.print-topItem p{
+  font-size: .9rem;
+  margin: 8px 0px;
+}
+.print-topItem p span{
+  font-weight: 600;
+}
+.shippingInfo{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 2rem;
+  gap:20px;
+  margin-bottom: 2rem;
+}
+.shippingInfo > div{
+  width: 33%;
+  border:1px solid #dee2e6;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+.shippingInfo > div h3{
+  font-size: 1rem;
+  font-weight: 500;
+  margin:0px 0px 15px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #f8f9fa;
+  padding:7px 8px;
+}
+.shippingInfo > div p{
+  font-size: .9rem;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin:0px;
+}
+.shippingInfo > div p span{
+  font-weight: 600;
+}
+.productInfo table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: .9rem;
+  text-align: center;
+}
+.productInfo table thead{
+  background-color: #f8f9fa;
+  color:#343a40;
+}
+.productInfo table thead th,
+.productInfo table tbody td{
+  padding: 7px 15px;
+  border: 1px solid #dee2e6;
+}
+.productInfo table tbody td:last-child{
+  text-align: right;
+}
+.productInfo table tbody div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.productInfo table tbody img{
+  width: 50px;
+}
+.productInfo table tfoot td:first-child{
+  padding: 7px 15px;
+  text-align: right;
+  font-weight: 400;
+}
+.productInfo table tfoot td{
+  padding: 7px 15px;
+  text-align: right;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.productInfo table tfoot tr:last-child td:last-child{
+  border-top: 1px solid #dee2e6;
+}
+.status{
+  color: #22C55E;
+  background: #def3e5;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .print-content{
+    padding: 2rem 1rem 0rem;
+  }
+  .shippingInfo,
+  .print-top,
+  .print-topItem{
+    flex-direction: column;
+  }
+  .shippingInfo > div{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .productInfo{
+    overflow-x: scroll;
+  }
+  .productInfo table{
+    font-size: .8rem;
+  }
+  .productInfo table thead th,
+  .productInfo table tbody td{
+    padding: 7px 5px;
+  }
+  .productInfo table tbody div{
+    gap: 5px;
+  }
+  .productInfo table tbody img{
+    width: 40px;
+  }
+  .productInfo table tfoot td:first-child{
+    padding: 7px 5px;
+  }
+  .productInfo table tfoot td{
+    padding: 7px 5px;
+    font-size: .8rem;
+  }
+  .print-button{
+    padding: .5rem 1rem;
+  }
+}
